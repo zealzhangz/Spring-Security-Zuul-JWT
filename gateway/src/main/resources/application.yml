@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: gateway
+
+server:
+  port: 8808
+
+zuul:
+  routes:
+    users:
+      path: /api/**
+      url: http://localhost:8909/user
+
+jwt:
+  token:
+    issuer: zhangaoo.com
+    expiredMinutes: 60
+    refreshExpiredMinutes: 480
+    signingKey: ${random.value}

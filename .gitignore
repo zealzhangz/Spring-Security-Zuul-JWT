@@ -1,0 +1,11 @@
+.DS_Store
+
+**/target/
+
+script/release
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
