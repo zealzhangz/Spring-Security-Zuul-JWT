@@ -5,6 +5,7 @@ import com.zealzhangz.auth.service.AuthorityService;
 import com.zealzhangz.auth.token.JwtAuthenticationProvider;
 import com.zealzhangz.auth.token.JwtTokenHelper;
 import com.zealzhangz.auth.token.LoginProcessingFilter;
+import com.zealzhangz.auth.verify.AjaxAccessDeniedHandler;
 import com.zealzhangz.auth.verify.ApiAuthenticationProcessingFilter;
 import com.zealzhangz.auth.verify.ApiAuthenticationProvider;
 import com.zealzhangz.auth.verify.SkipPathRequestMatcher;
@@ -56,6 +57,8 @@ public class RestSecurityConfig extends WebSecurityConfigurerAdapter {
     private JwtTokenHelper jwtTokenHelper;
     @Autowired
     private AuthorityService authorityService;
+    @Autowired
+    private AjaxAccessDeniedHandler ajaxAccessDeniedHandler;
 
     /**
      * 注意不要忘记注入这个 Bean ，否则做具体认证时加载不到实现认证的Provider，比如这里的 jwtAuthenticationProvider
@@ -112,7 +115,10 @@ public class RestSecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers(HttpMethod.resolve(rule.getMethod()), rule.getApiUrl()).hasAuthority(rule.getAuthority());
         }
         http
+
                 .csrf().disable()
+                .exceptionHandling().accessDeniedHandler(ajaxAccessDeniedHandler)
+            .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
