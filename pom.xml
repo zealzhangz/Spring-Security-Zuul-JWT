@@ -21,6 +21,7 @@
         <module>gateway</module>
         <module>rest-app</module>
         <module>common</module>
+        <module>eureka-server</module>
     </modules>
 
 

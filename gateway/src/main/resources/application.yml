@@ -7,9 +7,14 @@ server:
 
 zuul:
   routes:
-    users:
+    users-api:
       path: /api/**
-      url: http://localhost:8909/user
+      serviceId: user-modules
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:20000/eureka/
 
 jwt:
   token:

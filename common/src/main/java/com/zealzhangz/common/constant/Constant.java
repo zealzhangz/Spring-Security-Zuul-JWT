@@ -10,4 +10,6 @@ public class Constant {
     public static final String REFRESH_TOKEN = "refresh_token";
     public static final String AUTHENTICATION_URL = "/api/tokens";
     public static final String API_ROOT_URL = "/api/**";
+    public static final String AUTHENTICATION_HEADER_NAME = "Authorization";
+    public static final String HEADER_PREFIX = "Bearer ";
 }

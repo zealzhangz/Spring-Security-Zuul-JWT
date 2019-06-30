@@ -48,4 +48,8 @@ public class MyRestController {
         }
        return new ResponseData(ResponseData.FAIL,"Can not find user:" + username);
     }
+    @GetMapping("/all")
+    public ResponseData getAllUser(){
+        return new ResponseData(MEMORY_USER);
+    }
 }

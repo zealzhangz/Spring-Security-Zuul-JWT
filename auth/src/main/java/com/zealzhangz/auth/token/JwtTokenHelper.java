@@ -15,6 +15,8 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.UUID;
 
+import static com.zealzhangz.common.constant.Constant.HEADER_PREFIX;
+
 /**
  * @author Created by ao.zhang/ao.zhang@iluvatar.ai.<br/>
  * @version Version: 0.0.1
@@ -83,5 +85,20 @@ public class JwtTokenHelper {
             log.info("JWT Token is expired", expiredEx);
             throw new JwtExpiredTokenException("JWT Token expired", expiredEx);
         }
+    }
+
+    public String extract(String header) {
+        if (StringUtils.isBlank(header)) {
+            throw new InvalidJwtToken("Authorization header cannot be blank!");
+        }
+
+        if (header.length() < HEADER_PREFIX.length()) {
+            throw new InvalidJwtToken("Invalid authorization header size.");
+        }
+        if(!header.startsWith(HEADER_PREFIX)){
+            throw new InvalidJwtToken("Invalid authorization,Token type valid");
+        }
+
+        return header.substring(HEADER_PREFIX.length());
     }
 }

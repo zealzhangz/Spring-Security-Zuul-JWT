@@ -3,3 +3,8 @@ spring:
     name: user-modules
 server:
   port: 8909
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:20000/eureka/
