@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author Created by ao.zhang/ao.zhang@iluvatar.ai.<br/>
+ * @author Created by https://zhangaoo.com.<br/>
  * @version Version: 0.0.1
  * @date DateTime: 2019/06/27 09:58:00<br/>
  */

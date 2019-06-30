@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 /**
- * @author Created by ao.zhang/ao.zhang@iluvatar.ai.<br/>
+ * @author Created by https://zhangaoo.com.<br/>
  * @version Version: 0.0.1
  * @date DateTime: 2019/06/25 14:06:00<br/>
  */

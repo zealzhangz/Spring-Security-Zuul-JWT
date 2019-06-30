@@ -3,7 +3,7 @@ package com.zealzhangz.auth.verify.verifier;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Created by ao.zhang/ao.zhang@iluvatar.ai.<br/>
+ * @author Created by https://zhangaoo.com.<br/>
  * @version Version: 0.0.1
  * @date DateTime: 2019/06/28 19:26:00<br/>
  */

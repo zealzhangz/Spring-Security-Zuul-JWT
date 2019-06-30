@@ -32,7 +32,7 @@ import static com.zealzhangz.common.constant.Constant.API_ROOT_URL;
 import static com.zealzhangz.common.constant.Constant.AUTHENTICATION_URL;
 
 /**
- * @author Created by ao.zhang/ao.zhang@iluvatar.ai.<br/>
+ * @author Created by https://zhangaoo.com.<br/>
  * @version Version: 0.0.1
  * @date DateTime: 2019/06/28 10:01:00<br/>
  */

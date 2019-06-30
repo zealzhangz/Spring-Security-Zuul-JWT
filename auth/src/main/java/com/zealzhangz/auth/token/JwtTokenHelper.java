@@ -18,7 +18,7 @@ import java.util.UUID;
 import static com.zealzhangz.common.constant.Constant.HEADER_PREFIX;
 
 /**
- * @author Created by ao.zhang/ao.zhang@iluvatar.ai.<br/>
+ * @author Created by https://zhangaoo.com.<br/>
  * @version Version: 0.0.1
  * @date DateTime: 2019/06/24 19:46:00<br/>
  */

@@ -1,7 +1,7 @@
 package com.zealzhangz.common.constant;
 
 /**
- * @author Created by ao.zhang/ao.zhang@iluvatar.ai.<br/>
+ * @author Created by https://zhangaoo.com.<br/>
  * @version Version: 0.0.1
  * @date DateTime: 2019/06/22 16:53:00<br/>
  */
