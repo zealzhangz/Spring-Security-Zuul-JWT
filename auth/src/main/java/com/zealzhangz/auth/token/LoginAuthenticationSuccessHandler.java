@@ -37,7 +37,7 @@ public class LoginAuthenticationSuccessHandler implements AuthenticationSuccessH
         Map<String, Object> tokenMap = new HashMap<>(2);
         if (Constant.ACCESS_TOKEN.equals(userContext.getCurrentTokenType())) {
             String accessToken = jwtTokenHelper.createAccessToken(userContext.getUsername(), userContext.getUserId());
-            String refreshToken = jwtTokenHelper.createAccessToken(userContext.getUsername(), userContext.getUserId());
+            String refreshToken = jwtTokenHelper.createRefreshToken(userContext.getUsername(), userContext.getUserId());
             tokenMap.put("access_token", accessToken);
             tokenMap.put("refresh_token", refreshToken);
         } else if (Constant.REFRESH_TOKEN.equals(userContext.getCurrentTokenType())) {

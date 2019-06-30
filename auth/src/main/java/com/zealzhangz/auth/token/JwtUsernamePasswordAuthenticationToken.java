@@ -25,4 +25,9 @@ public class JwtUsernamePasswordAuthenticationToken extends UsernamePasswordAuth
     public JwtUsernamePasswordAuthenticationToken(Object principal, Object credentials, Collection<? extends GrantedAuthority> authorities) {
         super(principal, credentials, authorities);
     }
+
+    @Override
+    public Object getDetails(){
+        return this.details;
+    }
 }
